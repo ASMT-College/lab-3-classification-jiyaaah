@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<SkinThickness &le; 45.0<br/>entropy = 0.993<br/>samples = 80<br/>value = [36, 44]<br/>class = Yes>, fillcolor="#dbedfa"] ;
+1 [label=<Glucose &le; 186.0<br/>entropy = 1.0<br/>samples = 72<br/>value = [36, 36]<br/>class = No>, fillcolor="#ffffff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<BMI &le; 43.6<br/>entropy = 0.982<br/>samples = 57<br/>value = [33, 24]<br/>class = No>, fillcolor="#f8ddc9"] ;
+1 -> 2 ;
+3 [label=<DiabetesPedigreeFunction &le; 0.415<br/>entropy = 0.994<br/>samples = 53<br/>value = [29, 24]<br/>class = No>, fillcolor="#fbe9dd"] ;
+2 -> 3 ;
+4 [label=<entropy = 0.811<br/>samples = 8<br/>value = [2, 6]<br/>class = Yes>, fillcolor="#7bbeee"] ;
+3 -> 4 ;
+5 [label=<entropy = 0.971<br/>samples = 45<br/>value = [27, 18]<br/>class = No>, fillcolor="#f6d5bd"] ;
+3 -> 5 ;
+6 [label=<entropy = 0.0<br/>samples = 4<br/>value = [4, 0]<br/>class = No>, fillcolor="#e58139"] ;
+2 -> 6 ;
+7 [label=<Insulin &le; 149.0<br/>entropy = 0.722<br/>samples = 15<br/>value = [3, 12]<br/>class = Yes>, fillcolor="#6ab6ec"] ;
+1 -> 7 ;
+8 [label=<DiabetesPedigreeFunction &le; 0.45<br/>entropy = 0.971<br/>samples = 5<br/>value = [3, 2]<br/>class = No>, fillcolor="#f6d5bd"] ;
+7 -> 8 ;
+9 [label=<entropy = 0.0<br/>samples = 2<br/>value = [0, 2]<br/>class = Yes>, fillcolor="#399de5"] ;
+8 -> 9 ;
+10 [label=<entropy = 0.0<br/>samples = 3<br/>value = [3, 0]<br/>class = No>, fillcolor="#e58139"] ;
+8 -> 10 ;
+11 [label=<entropy = 0.0<br/>samples = 10<br/>value = [0, 10]<br/>class = Yes>, fillcolor="#399de5"] ;
+7 -> 11 ;
+12 [label=<entropy = 0.0<br/>samples = 8<br/>value = [0, 8]<br/>class = Yes>, fillcolor="#399de5"] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
